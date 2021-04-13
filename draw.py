@@ -9,4 +9,6 @@ cv.circle(frame, (frame.shape[1]//2, frame.shape[0]//2 ), 50, (255, 0, 0), thick
 cv.imshow('Circle', frame)
 cv.line(frame, (0, 0), (frame.shape[1]//2, frame.shape[0]//2 ), color=(255, 255, 255), thickness=3)
 cv.imshow('Line', frame)
+cv.putText(frame, 'Drawing in a frame', org=(0, 400), fontFace=cv.FONT_HERSHEY_DUPLEX, fontScale=1, color=(0, 0, 0), thickness= 3 )
+cv.imshow('Text', frame)
 cv.waitKey(0)
