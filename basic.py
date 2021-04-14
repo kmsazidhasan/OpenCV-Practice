@@ -13,4 +13,15 @@ cv.imshow('Gray', gray)
 # Blurring an Image
 blur = cv.GaussianBlur(img, ksize=(5,5), sigmaX=cv.BORDER_DEFAULT)
 cv.imshow('Blur', blur)
+
+#Edge Cascading
+canny = cv.Canny(img, 150, 300)
+cv.imshow('Edge_Canny', canny )
+
+dilate = cv.dilate(canny, (3, 3), iterations=3)
+cv.imshow('Edge_Dilate', dilate)
+
+erode = cv.erode(dilate, (3, 3), iterations=3)
+cv.imshow('Edge_Erode', erode)
+
 cv.waitKey(0)
