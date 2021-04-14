@@ -24,4 +24,8 @@ cv.imshow('Edge_Dilate', dilate)
 erode = cv.erode(dilate, (3, 3), iterations=3)
 cv.imshow('Edge_Erode', erode)
 
+# Cropping an Image
+crop = img[200:400, 500:700]
+cv.imshow('Cropped', crop)
+
 cv.waitKey(0)
