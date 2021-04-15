@@ -9,4 +9,6 @@ def rescaleFrame(frame, scale = 0.75):
 
 def tranlate(img, x, y):
     transMat = np.float32([[1, 0, x], [0, 1, y]])
-    
+    dimensions = img.shape[::-1]
+
+    return cv.warpAffine(img, transMat, dimensions)
