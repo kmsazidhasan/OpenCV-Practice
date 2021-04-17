@@ -7,5 +7,7 @@ rescaledImg = rescaleFrame(img, 0.5)
 
 translated = translate(rescaledImg, 100, 100)
 
+rotated = rotate(rescaledImg, 45)
+cv.imshow('Rotated', rotated)
 cv.imshow('Translated', translated)
 cv.waitKey(0)
