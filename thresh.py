@@ -11,4 +11,7 @@ cv.imshow('Gray', gray)
 threshold, thresh = cv.threshold(gray, 150, 255, cv.THRESH_BINARY)
 cv.imshow('Simple Thresholded', thresh)
 
+threshold, thresh_inv = cv.threshold(gray, 150, 255, cv.THRESH_BINARY_INV )
+cv.imshow('Simple Thresholded Inverse', thresh_inv)
+
 cv.waitKey(0)
