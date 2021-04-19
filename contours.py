@@ -11,4 +11,7 @@ cv.imshow('Gray', gray)
 canny = cv.Canny(img, 125, 175)
 cv.imshow('Edge_Canny', canny)
 
+contours, hierarchies = cv.findContours(canny, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE)
+print(f'{len(contours)} contour(s) found!')
+
 cv.waitKey(0)
